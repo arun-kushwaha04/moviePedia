@@ -1,0 +1,69 @@
+CREATE TABLE `movie` (
+  `EIDR` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
+  `language_used` varchar(50) DEFAULT NULL,
+  `release_date` date DEFAULT NULL,
+  `budget` int(15) DEFAULT NULL,
+  `gross_worldwide` bigint(20) DEFAULT NULL,
+  `runtime` int(5) DEFAULT NULL,
+  `adult` bool DEFAULT false,
+  `rating` decimal(12,6) DEFAULT NULL,
+  PRIMARY KEY (`EIDR`)
+)ENGINE=InnoDB AUTO_INCREMENT=402460;
+
+
+CREATE TABLE `actor_info`(
+    `actor_ID` int(10) NOT NULL AUTO_INCREMENT,
+    `full_name` varchar(1000) DEFAULT NULL,
+    `gender` char(6) DEFAULT NULL,
+    `date_of_birth` date DEFAULT NULL,
+    `nationality` varchar(30) DEFAULT NULL,
+    `estimated_wealth` int(15) DEFAULT NULL,
+    PRIMARY KEY (`actor_ID`)
+)ENGINE=InnoDB AUTO_INCREMENT=2460; 
+
+CREATE TABLE `movie_cast`(
+    `EIDR` int(10) NOT NULL,
+    `actor_ID` int(10) NOT NULL,
+    `character_name` varchar(100) DEFAULT NULL,
+    FOREIGN KEY (EIDR) REFERENCES movie(EIDR) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (actor_ID) REFERENCES actor_info(actor_ID) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE `directors`(
+    `director_ID` int(10) NOT NULL AUTO_INCREMENT,
+    `full_name` varchar(1000) DEFAULT NULL,
+    `gender` char(6) DEFAULT NULL,
+    `nationality` varchar(30) DEFAULT NULL,
+    `estimated_wealth` int(15) DEFAULT NULL,    
+    PRIMARY KEY (`director_ID`)
+)ENGINE=InnoDB AUTO_INCREMENT=102460; 
+
+CREATE TABLE `producers`(
+    `producer_ID` int(10) NOT NULL AUTO_INCREMENT,
+    `full_name` varchar(1000) DEFAULT NULL,
+    `gender` char(6) DEFAULT NULL,
+    `nationality` varchar(50) DEFAULT NULL,
+    `estimated_wealth` int(15) DEFAULT NULL,    
+    PRIMARY KEY (`producer_ID`)
+)ENGINE=InnoDB AUTO_INCREMENT=202460; 
+
+CREATE TABLE `production_comapnies`(
+    `production_company_ID` int(10) NOT NULL AUTO_INCREMENT,
+    `production_compnay_name` varchar(1000) DEFAULT NULL,
+    `origin_country` varchar(50) DEFAULT NULL,
+    PRIMARY KEY (`production_company_ID`)
+)ENGINE=InnoDB AUTO_INCREMENT=302460;
+
+CREATE TABLE `movie_crew`(
+    `EIDR` int(10) NOT NULL,
+    `director_ID` int(10) NOT NULL,
+    `producer_ID` int(10) NOT NULL,
+    `production_company_ID` int(10) NOT NULL,
+    FOREIGN KEY (EIDR) REFERENCES movie(EIDR) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (director_ID) REFERENCES directors(director_ID) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (producer_ID) REFERENCES producers(producer_ID) ON UPDATE CASCADE ON DELETE RESTRICT,
+    FOREIGN KEY (production_company_ID) REFERENCES production_comapnies(production_company_ID) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
