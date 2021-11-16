@@ -1,0 +1,268 @@
+group: Moviepedia
+
+actor_info = {
+actor_id,first_name,last_name,gender,date_of_birth,nationality,net_worth
+2460,Daniel,Radcliffe,male,1989-07-23,British,94000000
+2461,Rupert,Grint,male,1988-08-24,British,50000000
+2462,Emma,Watson,female,1990-04-15,British,85000000
+2463,Michael,Gambon,male,1940-10-19,Irish,20000000
+2464,Ralph,Fiennes,male,1962-12-22,Serbian,50000000
+2465,Tom,Felton,male,1987-09-22,British,20000000
+2466,Alan,Rickman,male,1946-02-21,English,16000000
+2467,Robbie,Coltrane,male,1950-03-30,Scottish,4000000
+2468,Maggie,Smith,female,1934-12-28,Scottish,20000000
+2469,Matthew,McConaughey,male,1989-07-23,British,94000000
+2470,John,Lithgow,male,1945-10-19,American,500000000
+2471,Anne,Hathway,female,1982-11-12,American,85000000
+2472,Jessica,Gibbon,female,1977-03-24,American,70000000
+2473,Michael,Caine,male,1962-12-22,American,60000000
+2474,Casey,Affleck,male,1981-10-22,British,10000000
+2475,Wes,Bentley,male,1946-03-25,English,16000000
+2476,Tom,Holland,male,1996-06-01,British,18000000
+2477,Michael,Keaton,male,1951-09-05,American,400000000
+2478,Jon,Favreau,male,1966-10-19,American,100000000
+2479,Gwyneth,Paltrow,female,1972-09-27,American,150000000
+2480,Zendaya,undefined,female,1996-09-01,American,15000000
+2481,Donald,Glover,male,1983-09-25,American,35000000
+2482,Jacob,Batalon,male,1996-10-09,English,4000000
+2483,Leonardo,DiCaprio,male,1974-11-11,American,260000000
+2484,Kate,Winslet,female,1975-10-05,British,65000000
+2485,Billy,Zane,male,1966-02-24,American,85000000
+2486,Kathy,Bates,female,1948-06-28,American,20000000
+2487,Frances,Fisher,female,1952-05-11,American,2000000
+2488,Gloria,Stuart,female,1910-07-04,American,5000000
+2489,Bernard,Hill,male,1944-12-17,British,11000000
+2490,Hugh,Jackman,male,0168-10-12,Australian,180000000
+2491,Christian,Bale,male,1974-01-30,Welsh,120000000
+2492,Michael,Caine,male,1933-03-14,British,780000000
+2493,Rebecca,Hall,female,1982-05-03,British,7000000
+2494,Piper,Perabo,female,1976-10-31,American,10000000
+2495,David,Bowie,male,1947-01-08,British,230000000
+2496,Scarlett,Johansson,female,1984-11-22,American,165000000
+2497,Andy,Serkis,male,1964-04-20,British,18000000
+2498,Daniel,Davis,male,1945-11-26,American,1500000
+2499,Jake,Gyllenhaal,male,1980-12-19,American,80000000
+2500,Samuel,L.,male,1948-12-21,American,250000000
+2501,Jacob,Batalon,male,1996-10-09,American,4000000
+2502,Marisa,Tomei,female,1964-12-04,American,25000000
+}
+
+award = {
+award_id,award_name,award_category
+1,"National Movie Awards","Best Performance by a Male"
+2,"National Movie Awards","Best Performance by a Female"
+3,"Genre Award","Best Actress in a Movie"
+4,"Genre Award","Most Vile Villain"
+5,"Russian National Movie Awards","Best Foreign Actor"
+6,"Teen Choice Awards","Choice Summer Movie Actor"
+7,"Saturn Awards","Best Performance by a Younger Actor"
+8,"Teen Choice Awards","Choice Summer Movie Actress"
+9,"Kid's Choice Awards","Favorite Movie Actress"
+10,"MTV Movie Awards","Best Male Performance"
+11,"Blockbuster Entertainment Awards","Favorite Actor – Drama"
+12,"MTV Movie Awards","Best Male Performance"
+13,"Goldene Kamera","Best International Actress"
+14,"Jupiter Award","Best International Actress"
+15,"Blockbuster Entertainment Awards","Favorite Supporting Actor – Drama"
+16,"Blockbuster Entertainment Awards","Favorite Supporting Actress – Drama"
+17,"Saturn Awards","Best Supporting Actress"
+18,"Screen Actors Guild Awards","Outstanding Performance by a Female Actor in a Supporting Role"
+19,"Online Film Critics Society","Best Supporting Actress"
+20,"Kids Choice Awards","Favorite Movie Actor"
+21,"People's Choice Awards","Male Movie Star"
+22,"People's Choice Awards","Action Movie Star"
+23,"Kids Choice Awards","Favorite Movie Actress"
+24,"People's Choice Awards","Female Movie Star of 2019"
+}
+
+award_to_for = {
+EIDR,actor_id,award_id,year
+402460,2460,1,2007
+402460,2462,2,2007
+402460,2462,3,2007
+402460,2464,4,2007
+402461,2469,5,2015
+402462,2476,6,2017
+402462,2476,7,2018
+402462,2480,8,2017
+402462,2480,9,2018
+402463,2483,10,1998
+402463,2483,11,1998
+402463,2484,12,1998
+402463,2484,13,2001
+402463,2484,14,1998
+402463,2485,15,1998
+402463,2486,16,1998
+402463,2488,17,1998
+402463,2488,18,1998
+402463,2488,19,1998
+402465,2476,7,2019
+402465,2476,6,2019
+402465,2480,17,2019
+402465,2480,8,2019
+402465,2476,20,2020
+402465,2476,21,2019
+402465,2476,22,2019
+402465,2480,23,2020
+402465,2480,24,2019
+}
+
+cast_info = {
+EIDR,actor_id,character_name
+402460,2460,"Harry Potter"
+402460,2461,"Ron Weasley"
+402460,2462,"Hermione Granger"
+402460,2463,"Albus Dumbledore"
+402460,2464,"Lord Voldemort"
+402460,2465,"Draco Malfoy"
+402460,2466,"Severus Snape"
+402460,2467,"Rubeus Hagrid"
+402460,2468,"Minerva McGonagall"
+402461,2469,"Joseph 'Coop' Cooper"
+402461,2470,Donald
+402461,2471,"Dr. Amelia Brand"
+402461,2472,"Murphy 'Murph' Cooper"
+402461,2473,"Professor John Brand"
+402461,2474,"Tom Cooper"
+402461,2475,"Dr. Doyle"
+402462,2476,"Peter 'Spider-Man' Parker"
+402462,2477,"Adrian 'Vulture' Toomes"
+402462,2478,"Harold 'Happy' Hogan"
+402462,2479,"Pepper Potts"
+402462,2480,"Michelle 'MJ'"
+402462,2481,"Aaron Davis"
+402462,2482,Ned
+402463,2483,"Jack Dawson"
+402463,2484,"Rose Dewitt Bukater"
+402463,2485,"Cal Hockley"
+402463,2486,"Molly Brown"
+402463,2487,"Ruth Dewitt Bukater"
+402463,2488,"Old Rose"
+402463,2489,"Captain Smith"
+402464,2490,"Robert Angier"
+402464,2491,"Alfred Borden"
+402464,2492,Cutter
+402464,2493,Sarah
+402464,2494,"Julia McCullough"
+402464,2495,Tesla
+402464,2496,"Olivia Wenscombe"
+402464,2497,Alley
+402464,2498,Judge
+402465,2476,"Peter Parker 'Spider-Man' "
+402465,2480,"Michelle 'MJ'"
+402465,2478,"Harold Hogan 'Happy'"
+402465,2499,"Quentin Beck 'Mysterio' "
+402465,2500,"Nick Fury"
+402465,2501,Ned
+402465,2502,"May Parker"
+}
+
+directed_by = {
+EIDR,director_id
+402460,102460
+402461,102461
+402462,102462
+402463,102463
+402464,102461
+402465,102462
+}
+
+director_info = {
+director_id,first_name,last_name,gender,nationality,net_worth
+102460,David,Yates,male,British,22000000
+102461,Christopher,Nolan,male,British,22000000
+102462,Jon,Watts,male,American,16000000
+102463,James,Cameron,male,Canadian,700000000
+}
+
+genre_for_movie = {
+EIDR,genre_name
+402460,Adventure
+402460,Mystery
+402460,Fantasy
+402461,Adventure
+402461,Mystery
+402461,"Science Fiction"
+402461,Drama
+402461,Epic
+402462,"Science Fiction"
+402462,Adventure
+402462,Action
+402463,Drama
+402463,Romance
+402464,Drama
+402464,Mystery
+402464,Scir-Fi
+402464,Thriller
+402465,Adventure
+402465,Action
+402465,Fantasy
+402465,"Science Fiction"
+402465,Comedy
+402465,Teen
+402465,SuperHero
+}
+
+genres = {
+genre_name
+Action
+Adventure
+Comedy
+Drama
+Epic
+Fantasy
+Mystery
+Romance
+"Science Fiction"
+Scir-Fi
+SuperHero
+Teen
+Thriller
+}
+
+movie = {
+EIDR,title,description,language,release_date,budget,gross_worldwide,runtime,is_adult,rating,subscription_vod
+402460,"Harry Potter and the Order of the Phoenix","The rebellion begins! Lord Voldemort has returned, but the Ministry of Magic is doing everything it can to keep the wizarding world from knowing the truth – including appointing Ministry official Dolores Umbridge as the new Defence Against the Dark Arts professor at Hogwarts. When Umbridge refuses to teach practical defensive magic, Ron and Hermione convince Harry to secretly train a select group of students for the wizarding war that lies ahead. A terrifying showdown between good and evil awaits in this enthralling film version of the fifth novel in J.K. Rowling’s Harry Potter series. Prepare for battle!",en,2007-06-28,150000000,938212738,138,0,7.700000,"Prime Video;"
+402461,Intersteller,"When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",en,2014-11-07,165000000,67740000,169,0,8.600000,"Prime Video;Netflix;"
+402462,"Spider-Man: Homecoming","Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",en,2017-07-07,175000000,67740000,133,0,7.400000,NULL
+402463,Titanic,"Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",en,1997-12-19,200000000,67740000,194,1,7.800000,"Hotstar;"
+402464,"The Prestige","After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",en,2007-06-28,40000000,109676311,138,0,7.700000,"Prime Video;Netflix;"
+402465,"Spider-man Far From Home","Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins.",en,2019-07-02,160000000,1131927996,129,0,7.400000,NULL
+}
+
+produced_by = {
+EIDR,producer_id
+402460,202460
+402461,202461
+402462,202462
+402463,202463
+402464,202464
+402465,202462
+}
+
+producer_info = {
+producer_id,first_name,last_name,gender,nationality,net_worth
+202460,David,Heyman,male,British,175000000
+202461,David,Heyman,male,American,200000000
+202462,Kevin,Feige,male,American,200000000
+202463,Jon,Landau,male,American,100000000
+202464,Aaron,Ryder,male,American,7000000
+}
+
+produced_company = {
+EIDR,production_company_id
+402460,302460
+402461,302460
+402462,302461
+402463,302462
+402464,302460
+402465,302461
+}
+
+production_company_info = {
+production_company_id,production_compnay_name,origin_country
+302460,"Warner Bros. Pictures",US
+302461,"Columbia Pictures",US
+302462,"Paramount Pictures",US
+}
+
